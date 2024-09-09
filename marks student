@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+
+char* calculate_grade(int marks) {
+    if (marks < 40) {
+        return "Fail";
+    } 
+    else if (marks >= 40 && marks <= 49) {
+        return "D";
+    }
+     else if (marks >= 50 && marks <= 59) {
+        return "C";
+    }
+     else if (marks >= 60 && marks <= 69) {
+      
+        return "B";
+    } 
+    else if (marks >= 70 && marks <= 79) {
+        return "A";
+    }
+     else if (marks >= 80 && marks <= 89) {
+        return "E";
+    }
+     else if (marks >= 90 && marks <= 100) {
+        return "O";
+    }
+     
+     else {
+        return "Invalid Marks";
+    }
+}
+
+int main() {
+    int marks;
+    
+    
+    printf("Enter the total marks of the student: ");
+    scanf("%d", &marks);
+    
+    
+    printf("The grade is: %s\n", calculate_grade(marks));
+    
+    return 0;
+}
